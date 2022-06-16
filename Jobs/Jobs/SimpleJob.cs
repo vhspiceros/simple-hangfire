@@ -7,8 +7,8 @@ using simple_hangfire.Jobs.IJobs;
 
 namespace simple_hangfire.Jobs.Jobs {
     public class SimpleJob : ISimpleJob {
-        private readonly ILogger<SimpleJob> _Logger;
-        public SimpleJob(ILogger<SimpleJob> logger) {
+        private readonly ILogger _Logger;
+        public SimpleJob(ILogger logger) {
             _Logger = logger;
         }
 

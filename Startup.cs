@@ -17,6 +17,7 @@ namespace simple_hangfire {
 
         private Microsoft.Extensions.Logging.ILogger _Logger;
         public IConfiguration _configuration { set; get; }
+
         public Startup(IConfiguration configuration) {
             _configuration = configuration;
         }
@@ -81,6 +82,7 @@ namespace simple_hangfire {
 
             var loggerFactory = new LoggerFactory().AddSerilog(serilog);
             _Logger = loggerFactory.CreateLogger("Logger");
+            _Logger.LogInformation("Starting...");
         }
 
         /// <summary>
